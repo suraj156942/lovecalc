@@ -1,0 +1,95 @@
+<!Doctype html>
+<head>
+<title>Love calcuulator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+<style>
+*{
+   margin:0px;
+   padding:0px;
+}
+#loading{
+   width:100%;
+   height:100%;
+    backgroung-image:url("333.gif");
+   }
+
+body{
+  /*background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1028725/pexels-photo-1028725.jpeg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-image: linear-gradient(25deg,#ffc107 50%, #007bff 50%);
+    eft: 100%;
+    height: 100vh;
+    position: relative;
+ }
+ header{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+form.form-inline.w-75.m-auto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+   opacity:0;
+}
+
+</style>
+<body>
+<div id="loading"></div>
+<header >
+ 
+<div class="card w-50 m-auto text-center ">
+  <div class="card-header bg-danger text-white">Love calculator</div>
+  <div class="card-body"id="main">
+   <form class="form-inline w-75 m-auto">
+    <div class="form-group">
+     <input type="text" name="" class="form-control text-center " placeholder="Your Name" id="name" >
+    </div>
+<br>
+    <div class="pl-4 pr-4">
+     <span>+</span>
+<img src="https://media.tenor.com/images/752063d293a04a2ce7ac64b8f983e4d2/tenor.gif"/>
+    </div>
+    <div class="form-group">
+     <input type="text" name="" class="form-control text-center " placeholder=" Love Name" id="lname">
+    </div>
+   </form> <br>
+    <div class="w-70 m-auto">
+     <button  class="btn btn-success w-50" onclick="checkloveper()"> click </button>
+    </div>
+    <br>
+    <div>
+     <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center w-25 m-auto" id="lovevalue">
+    </div>
+  </div> 
+  <div class="card-footer ">BEST OF LUCK!</div>
+</div>
+
+</header>
+
+<script>
+function checkloveper() {
+var one=document.querySelector("#name").value;
+var two=document.querySelector("#lname").value;
+if((one=="") && (two==""))
+{
+  alert("Fill the field");
+}
+ else
+{
+  var lovedata=Math.floor(Math.random()*100+1);
+   //console.log(lovedata);
+document.getElementById('lovevalue').value = lovedata + "%";
+}
+}
+</script>
+</body>
+</html>
